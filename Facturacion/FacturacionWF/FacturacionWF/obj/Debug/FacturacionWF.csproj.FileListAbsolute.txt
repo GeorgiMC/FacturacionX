@@ -16,3 +16,10 @@ D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionW
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.exe
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csprojResolveAssemblyReference.cache
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.dll
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.dll
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoFacturas.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoDevoluciones.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoPedidos.resources

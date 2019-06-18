@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace FacturacionWF
 {
     public partial class ListaClientes : Form
     {
+        ClienteLogica clienteLogica = new ClienteLogica(); 
         public ListaClientes()
         {
             InitializeComponent();
+            cargaDatos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -22,6 +25,12 @@ namespace FacturacionWF
             Factura frm = (Factura)Owner;
             frm.lblSubtotal.Text = txtCodCliente.Text;
             this.Close();
+        }
+
+        public void cargaDatos()
+        {
+            dgvClientes.AutoGenerateColumns = false;
+            dgvClientes.DataSource = clienteLogica.SeleccionarClientes("001");
         }
     }
 }

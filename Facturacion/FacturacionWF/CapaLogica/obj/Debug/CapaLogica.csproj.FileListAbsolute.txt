@@ -2,3 +2,6 @@ D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.dll
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.dll
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.dll
+D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
