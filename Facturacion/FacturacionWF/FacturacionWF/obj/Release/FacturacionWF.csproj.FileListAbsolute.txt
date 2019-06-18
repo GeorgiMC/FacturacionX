@@ -1,0 +1,17 @@
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Release\FacturacionWF.exe.config
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Release\FacturacionWF.exe
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Release\FacturacionWF.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Articulo.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Cliente.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Compra.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Credito.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Devolucion.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Factura.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.InicioSesion.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Inventario.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.ListaClientes.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Pedido.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.Properties.Resources.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.csproj.GenerateResource.Cache
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.exe
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Release\FacturacionWF.pdb

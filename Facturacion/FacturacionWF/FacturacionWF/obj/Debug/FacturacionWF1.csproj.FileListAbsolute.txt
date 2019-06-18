@@ -1,0 +1,17 @@
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe.config
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.pdb
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Articulo.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Cliente.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compra.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Devolucion.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Factura.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.InicioSesion.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inventario.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaClientes.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pedido.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Properties.Resources.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF1.csproj.GenerateResource.Cache
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.exe
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.pdb
