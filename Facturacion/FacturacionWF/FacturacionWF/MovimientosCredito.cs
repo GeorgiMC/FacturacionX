@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace FacturacionWF
 {
-    public partial class InicioSesion : Form
+    public partial class MovimientosCredito : Form
     {
-        public InicioSesion()
+        public MovimientosCredito()
         {
             InitializeComponent();
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            ListadoPedidos frm = new ListadoPedidos();
-            frm.Show();
         }
     }
 }

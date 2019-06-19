@@ -23,3 +23,6 @@ D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.p
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoFacturas.resources
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoDevoluciones.resources
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoPedidos.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito2.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.FacturarPedido.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MovimientosCredito.resources

@@ -99,7 +99,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "InicioSesion";
-            this.Text = "Form1";
+            this.Text = "Inicio de Sesion";
             this.ResumeLayout(false);
             this.PerformLayout();
 

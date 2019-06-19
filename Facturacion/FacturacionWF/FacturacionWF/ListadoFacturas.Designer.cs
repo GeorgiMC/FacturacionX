@@ -30,17 +30,18 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtCodCliente = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             this.codCliente,
             this.nomCliente,
             this.fecha,
+            this.estado,
             this.total});
             this.dataGridView1.Location = new System.Drawing.Point(13, 149);
             this.dataGridView1.Name = "dataGridView1";
@@ -67,21 +69,21 @@
             this.txtCodCliente.TabIndex = 1;
             this.txtCodCliente.Text = "Codigo Cliente";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(290, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Nombre Cliente";
+            this.txtNombre.Location = new System.Drawing.Point(290, 34);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 2;
+            this.txtNombre.Text = "Nombre Cliente";
             // 
-            // textBox3
+            // txtDocumento
             // 
-            this.textBox3.Location = new System.Drawing.Point(423, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Documento";
+            this.txtDocumento.Location = new System.Drawing.Point(423, 34);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
+            this.txtDocumento.TabIndex = 3;
+            this.txtDocumento.Text = "Documento";
             // 
             // dateTimePicker1
             // 
@@ -117,13 +119,13 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Rango de Fechas";
             // 
-            // comboBox1
+            // cboEstado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(570, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(570, 32);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(121, 21);
+            this.cboEstado.TabIndex = 9;
             // 
             // documento
             // 
@@ -134,16 +136,23 @@
             // 
             this.codCliente.HeaderText = "Codigo Cliente";
             this.codCliente.Name = "codCliente";
+            this.codCliente.Width = 125;
             // 
             // nomCliente
             // 
             this.nomCliente.HeaderText = "Nombre Cliente";
             this.nomCliente.Name = "nomCliente";
+            this.nomCliente.Width = 300;
             // 
             // fecha
             // 
             this.fecha.HeaderText = "Fecha";
             this.fecha.Name = "fecha";
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
             // 
             // total
             // 
@@ -155,17 +164,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 496);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDocumento);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodCliente);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListadoFacturas";
-            this.Text = "ListadoFacturas";
+            this.Text = "Listado de Facturas";
+            this.Load += new System.EventHandler(this.ListadoFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,18 +186,19 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtCodCliente;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn codCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
