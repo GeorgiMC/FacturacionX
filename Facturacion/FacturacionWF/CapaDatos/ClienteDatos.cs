@@ -26,6 +26,7 @@ namespace CapaDatos
         public string barrio { get; set; }
         public string pais { get; set; }
         public string estado { get; set; }
+        public string ListaPrecio { get; set; }
 
         public static DataSet SeleccionarTodos(string cia)
         {
@@ -44,6 +45,17 @@ namespace CapaDatos
             SqlCommand comando = new SqlCommand("PA_SeleccionarClienteFiltro");
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@codCliente", codCliente);
+            DataSet ds = db.ExecuteReader(comando, "cliente");
+            return ds;
+        }
+        public static DataSet ObtenerCliente(string cia, string filtro)
+        {
+            Database db = DatabaseFactory.CreateDatabase("Default");
+
+            SqlCommand comando = new SqlCommand("PA_ObtenerClientes");
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@cia", cia);
+            comando.Parameters.AddWithValue("@filtro", filtro);
             DataSet ds = db.ExecuteReader(comando, "cliente");
             return ds;
         }

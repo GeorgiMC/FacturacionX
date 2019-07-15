@@ -30,9 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnBuscarClie = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -75,10 +75,21 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cboTipoPago = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -94,9 +105,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnBuscarClie);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.btnCliente);
+            this.tabPage1.Controls.Add(this.txtNombreCliente);
+            this.tabPage1.Controls.Add(this.txtCodCliente);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.textBox5);
@@ -127,29 +138,29 @@
             this.tabPage1.Text = "Encabezado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarClie
+            // btnCliente
             // 
-            this.btnBuscarClie.Location = new System.Drawing.Point(766, 26);
-            this.btnBuscarClie.Name = "btnBuscarClie";
-            this.btnBuscarClie.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarClie.TabIndex = 24;
-            this.btnBuscarClie.Text = "Buscar Cliente";
-            this.btnBuscarClie.UseVisualStyleBackColor = true;
-            this.btnBuscarClie.Click += new System.EventHandler(this.btnBuscarClie_Click);
+            this.btnCliente.Location = new System.Drawing.Point(766, 26);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnCliente.TabIndex = 24;
+            this.btnCliente.Text = "Buscar Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnBuscarClie_Click);
             // 
-            // textBox7
+            // txtNombreCliente
             // 
-            this.textBox7.Location = new System.Drawing.Point(438, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(403, 20);
-            this.textBox7.TabIndex = 23;
+            this.txtNombreCliente.Location = new System.Drawing.Point(438, 57);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(403, 20);
+            this.txtNombreCliente.TabIndex = 23;
             // 
-            // textBox6
+            // txtCodCliente
             // 
-            this.textBox6.Location = new System.Drawing.Point(438, 29);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 22;
+            this.txtCodCliente.Location = new System.Drawing.Point(438, 29);
+            this.txtCodCliente.Name = "txtCodCliente";
+            this.txtCodCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCodCliente.TabIndex = 22;
             // 
             // label12
             // 
@@ -497,15 +508,99 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(913, 461);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Pago";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.cboTipoPago);
+            this.groupBox1.Location = new System.Drawing.Point(158, 75);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(571, 270);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos Pago:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(77, 77);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(71, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Tipo de Pago";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(311, 169);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 15;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(240, 136);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 13);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Total:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(311, 133);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 14;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(240, 104);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(40, 13);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Monto:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(311, 101);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 13;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(240, 172);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(45, 13);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Cambio:";
+            // 
+            // cboTipoPago
+            // 
+            this.cboTipoPago.FormattingEnabled = true;
+            this.cboTipoPago.Location = new System.Drawing.Point(80, 104);
+            this.cboTipoPago.Name = "cboTipoPago";
+            this.cboTipoPago.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoPago.TabIndex = 12;
             // 
             // FacturarPedido
             // 
@@ -521,6 +616,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,9 +627,7 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnBuscarClie;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox5;
@@ -574,5 +670,16 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cboTipoPago;
+        public System.Windows.Forms.TextBox txtNombreCliente;
+        public System.Windows.Forms.TextBox txtCodCliente;
     }
 }

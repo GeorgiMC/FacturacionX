@@ -3,3 +3,13 @@ D:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\bin\Debug\CapaDatos.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.dll
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\bin\Debug\CapaDatos.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\bin\Debug\CapaDatos.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaDatos\obj\Debug\CapaDatos.pdb

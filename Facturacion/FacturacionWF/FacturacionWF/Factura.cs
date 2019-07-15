@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,14 @@ namespace FacturacionWF
 {
     public partial class Factura : Form
     {
+        string cia = Global.GlobalUser.cia;
+        CompaniaLogica companialogica = new CompaniaLogica();
+        TipoLogica tipoLogica = new TipoLogica();
+        CajaLogica cajaLogica = new CajaLogica();
+        MonedaLogica monedaLogica = new MonedaLogica();
+        ArticuloLogica articuloLogica = new ArticuloLogica();
+        DetalleFacturaDatos listaDetalle = new DetalleFacturaDatos();
+        public string articuloSeleccionado = "";
         public Factura()
         {
             InitializeComponent();
@@ -19,9 +29,59 @@ namespace FacturacionWF
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ListaClientes frm = new ListaClientes();
+            AgregaArticulo frm = new AgregaArticulo("F");
+            frm.StartPosition = FormStartPosition.CenterScreen;
             AddOwnedForm(frm);
             frm.ShowDialog();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            AgregaCliente frm = new AgregaCliente("F");
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            AddOwnedForm(frm);
+            frm.ShowDialog();
+        }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+            cargarDatos();
+        }
+
+        public void cargarDatos()
+        {
+            cboCompania.DataSource = companialogica.SeleccionarCompanias("001");
+            cboCompania.DisplayMember = "nombre";
+            cboCompania.ValueMember = "cia";
+            cboCompania.SelectedValue = cia;
+
+            cboTipo.DataSource = tipoLogica.SeleccionarTipos(cia,"F");
+            cboTipo.DisplayMember = "descripcion";
+            cboTipo.ValueMember = "tipo";
+
+            txtCaja.Text = Global.GlobalVend.caja +"-"+cajaLogica.ObtenerCaja(cia, Global.GlobalVend.caja).descripcion;
+
+            txtDocumento.Text = "0";
+
+            cboMoneda.DataSource = monedaLogica.SeleccionarMoneda(cia);
+            cboMoneda.DisplayMember = "descripcion";
+            cboMoneda.ValueMember = "codigo";
+
+            cboEstado.Items.Add(new { Text = "Activo", Value = "A" });
+            cboEstado.Items.Add(new { Text = "Pendiente", Value = "P" });
+            cboEstado.Items.Add(new { Text = "Nulo", Value = "N" });
+            cboEstado.DisplayMember = "Text";
+            cboEstado.ValueMember = "Value";
+            cboEstado.SelectedIndex = 0;
+
+            txtVendedor.Text = Global.GlobalVend.nombre;
+        }
+
+        public void agregarArticulo()
+        {
+            ArticuloDatos art = new ArticuloDatos();
+            art = articuloLogica.ObtenerArticulos(cia, articuloSeleccionado)[0];
+            dgvDetalle.Rows.Add(art.codArticulo,art.descripcion,1,100,0,0,0);
         }
     }
 }

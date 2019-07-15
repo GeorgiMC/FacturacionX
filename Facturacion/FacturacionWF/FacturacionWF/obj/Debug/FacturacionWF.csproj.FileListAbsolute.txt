@@ -26,3 +26,127 @@ D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionW
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito2.resources
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.FacturarPedido.resources
 D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MovimientosCredito.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe.config
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.exe
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Articulo.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Cliente.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compra.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito2.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Devolucion.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Factura.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.FacturarPedido.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.InicioSesion.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inventario.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaClientes.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoDevoluciones.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoFacturas.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoPedidos.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MenuPrincipal.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MovimientosCredito.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pago.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pedido.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Properties.Resources.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Proveedor.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csproj.GenerateResource.Cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaArticulo.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.CierreCaja.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Usuario.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compania.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe.config
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.exe
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.dll
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.dll
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csprojResolveAssemblyReference.cache
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Articulo.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.CierreCaja.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Cliente.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compania.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compra.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito2.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Devolucion.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Factura.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.FacturarPedido.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.InicioSesion.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inventario.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaArticulo.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaClientes.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoDevoluciones.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoFacturas.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoPedidos.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MenuPrincipal.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MovimientosCredito.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pago.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pedido.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Properties.Resources.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Proveedor.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Usuario.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csproj.GenerateResource.Cache
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.CierreCaja.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compania.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaArticulo.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MenuPrincipal.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pago.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Proveedor.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Usuario.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaProveedores.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaProveedores.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaProveedores.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaUsuarios.resources
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inven.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inven.resources
+D:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaUsuarios.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe.config
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.exe
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.exe
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\FacturacionWF.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaDatos.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\bin\Debug\CapaLogica.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csprojResolveAssemblyReference.cache
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Articulo.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.CierreCaja.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Cliente.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compania.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Compra.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Credito2.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Devolucion.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Factura.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.FacturarPedido.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.InicioSesion.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inven.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inventario.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaArticulo.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaClientes.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoDevoluciones.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoFacturas.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListadoPedidos.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaProveedores.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaUsuarios.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MenuPrincipal.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.MovimientosCredito.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pago.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Pedido.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Properties.Resources.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Proveedor.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Usuario.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csproj.GenerateResource.Cache
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaArticulo.resources
+E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaCliente.resources

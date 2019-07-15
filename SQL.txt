@@ -8,6 +8,31 @@ tipo char(2),
 primary key (cia,usuario)
 );
 
+insert into usuario(cia,usuario,contrasena,tipo)
+values('001','Admin','xinia23','AM');
+
+create table vendedor(
+cia char(3),
+codigo char(3),
+nombre varchar(50),
+usuario varchar(20),
+caja char(3)
+primary key (cia,codigo)
+);
+
+insert into vendedor(cia,codigo,nombre,usuario,caja)
+values('001','1','Cesar Miranda','Admin','001');
+
+create table caja(
+cia char(3),
+caja char(3),
+descripcion varchar(20)
+primary key (cia,caja)
+)
+
+insert into caja(cia,caja,descripcion)
+values('001','001','Principal');
+
 CREATE TABLE compania(
 cia char(3),
 nombre varchar(50),
@@ -29,6 +54,44 @@ certificado varchar(20)
 primary key (cia)
 );
 
+INSERT INTO [dbo].[compania]
+           ([cia]
+           ,[nombre]
+           ,[nombreComercial]
+           ,[tipoCedula]
+           ,[cedula]
+           ,[telefono]
+           ,[fax]
+           ,[direccion]
+           ,[correo]
+           ,[provincia]
+           ,[canton]
+           ,[distrito]
+           ,[barrio]
+           ,[usuario]
+           ,[contrasena]
+           ,[pin]
+           ,[certificado])
+     VALUES
+           ('001'
+           ,'Libreria'
+           ,'Libreria y Macriobiotica Xinia'
+           ,'02'
+           ,'3101426963'
+           ,'86486530'
+           ,'86486530'
+           ,'Belen de Heredia, al frente de deposito San Antonio'
+           ,'lymXinia@gmail.com'
+           ,'01'
+           ,'01'
+           ,'01'
+           ,'01'
+           ,null
+           ,null
+           ,null
+           ,null);
+
+
 
 CREATE TABLE cliente(
 cia char(3),
@@ -46,13 +109,14 @@ canton char(2),
 distrito char(2),
 barrio char(2),
 pais char(3),
-estado char(1)
+estado char(1),
+listaPrecio char(3)
 primary key (cia,codCliente)
 );
 insert into cliente(cia,codCliente,nombre,nombreComercial,tipoCedula,cedula,telefono,fax,direccion,correo
-,provincia,canton,distrito,barrio,pais,estado) values
+,provincia,canton,distrito,barrio,pais,estado,listaPrecio) values
 ('001','1','Georgi Mesen','Georgi Mesen','01','116620079','86185765','86185765','El Roble'
-,'smesecerjor@gmail.com','01','01','01','01','001','A');
+,'smesecerjor@gmail.com','01','01','01','01','001','A','001');
 
 create table factura(
 cia char(3),
@@ -83,7 +147,234 @@ totalComprobante money
 primary key (cia,documento,caja)
 );
 
+INSERT INTO [dbo].[factura]
+           ([cia]
+           ,[tipo]
+           ,[documento]
+           ,[caja]
+           ,[fecha]
+           ,[codCliente]
+           ,[pago]
+           ,[agente]
+           ,[moneda]
+           ,[cambio]
+           ,[descripcion]
+           ,[referencia]
+           ,[estado]
+           ,[facturaDigital]
+           ,[servGravados]
+           ,[servExentos]
+           ,[mercGravadas]
+           ,[mercExentas]
+           ,[totalExenta]
+           ,[totalGravadas]
+           ,[totalVenta]
+           ,[totalDescuento]
+           ,[totalVentaNeta]
+           ,[totalImpuesto]
+           ,[totalComprobante])
+     VALUES
+           (<cia, char(3),>
+           ,<tipo, varchar(5),>
+           ,<documento, varchar(10),>
+           ,<caja, char(3),>
+           ,<fecha, datetime,>
+           ,<codCliente, varchar(10),>
+           ,<pago, varchar(5),>
+           ,<agente, char(3),>
+           ,<moneda, char(3),>
+           ,<cambio, money,>
+           ,<descripcion, varchar(100),>
+           ,<referencia, varchar(10),>
+           ,<estado, char(1),>
+           ,<facturaDigital, char(1),>
+           ,<servGravados, money,>
+           ,<servExentos, money,>
+           ,<mercGravadas, money,>
+           ,<mercExentas, money,>
+           ,<totalExenta, money,>
+           ,<totalGravadas, money,>
+           ,<totalVenta, money,>
+           ,<totalDescuento, money,>
+           ,<totalVentaNeta, money,>
+           ,<totalImpuesto, money,>
+           ,<totalComprobante, money,>);
+
 create table detalleFactura(
+cia char(3),
+documento varchar(10),
+secuencia int,
+articulo varchar(20),
+porcDescuento float,
+porcImpuesto float,
+unidadMedida float,
+cantidad float,
+costo float,
+precio money,
+montoImpuesto money,
+montoDescuento money,
+total money,
+descripcion varchar(50),
+primary key (cia,documento,secuencia)
+);
+
+INSERT INTO [dbo].[detalleFactura]
+           ([cia]
+           ,[documento]
+           ,[secuencia]
+           ,[articulo]
+           ,[porcDescuento]
+           ,[porcImpuesto]
+           ,[unidadMedida]
+           ,[cantidad]
+           ,[costo]
+           ,[precio]
+           ,[montoImpuesto]
+           ,[montoDescuento]
+           ,[total]
+           ,[descripcion])
+     VALUES
+           (<cia, char(3),>
+           ,<documento, varchar(10),>
+           ,<secuencia, int,>
+           ,<articulo, varchar(20),>
+           ,<porcDescuento, float,>
+           ,<porcImpuesto, float,>
+           ,<unidadMedida, float,>
+           ,<cantidad, float,>
+           ,<costo, float,>
+           ,<precio, money,>
+           ,<montoImpuesto, money,>
+           ,<montoDescuento, money,>
+           ,<total, money,>
+           ,<descripcion, varchar(50),>);
+
+create table pedido(
+cia char(3),
+tipo varchar(5),
+documento varchar(10),
+caja char(3),
+fecha datetime,
+codCliente varchar(10),
+pago varchar(5),
+agente char(3),
+moneda char(3),
+cambio money,
+descripcion varchar(100),
+estado char(1),
+facturaDigital char(1),
+servGravados money,
+servExentos money,
+mercGravadas money,
+mercExentas money,
+totalExenta money,
+totalGravadas money,
+totalVenta money,
+totalDescuento money,
+totalVentaNeta money,
+totalImpuesto money,
+totalComprobante money
+primary key (cia,documento,caja)
+);
+
+
+create table detallepedido(
+cia char(3),
+documento varchar(10),
+secuencia int,
+articulo varchar(20),
+porcDescuento float,
+porcImpuesto float,
+unidadMedida float,
+cantidad float,
+costo float,
+precio money,
+montoImpuesto money,
+montoDescuento money,
+total money,
+descripcion varchar(50),
+primary key (cia,documento,secuencia)
+);
+
+create table devolucion(
+cia char(3),
+tipo varchar(5),
+documento varchar(10),
+caja char(3),
+fecha datetime,
+codCliente varchar(10),
+pago varchar(5),
+agente char(3),
+moneda char(3),
+cambio money,
+descripcion varchar(100),
+factura varchar(10),
+estado char(1),
+facturaDigital char(1),
+servGravados money,
+servExentos money,
+mercGravadas money,
+mercExentas money,
+totalExenta money,
+totalGravadas money,
+totalVenta money,
+totalDescuento money,
+totalVentaNeta money,
+totalImpuesto money,
+totalComprobante money
+primary key (cia,documento,caja)
+);
+
+
+create table detalledevolucion(
+cia char(3),
+documento varchar(10),
+secuencia int,
+articulo varchar(20),
+porcDescuento float,
+porcImpuesto float,
+unidadMedida float,
+cantidad float,
+costo float,
+precio money,
+montoImpuesto money,
+montoDescuento money,
+total money,
+descripcion varchar(50),
+primary key (cia,documento,secuencia)
+);
+
+create table compras(
+cia char(3),
+tipo varchar(5),
+documento varchar(10),
+caja char(3),
+fecha datetime,
+codCliente varchar(10),
+pago varchar(5),
+agente char(3),
+moneda char(3),
+cambio money,
+descripcion varchar(100),
+referencia varchar(10),
+estado char(1),
+facturaDigital char(1),
+servGravados money,
+servExentos money,
+mercGravadas money,
+mercExentas money,
+totalExenta money,
+totalGravadas money,
+totalVenta money,
+totalDescuento money,
+totalVentaNeta money,
+totalImpuesto money,
+totalComprobante money
+primary key (cia,documento,caja)
+);
+
+
+create table detalleCompras(
 cia char(3),
 documento varchar(10),
 secuencia int,
@@ -108,13 +399,41 @@ descripcion varchar(50),
 primary key (cia,codBodega)
 );
 
+INSERT INTO [dbo].[bodega]
+           ([cia]
+           ,[codBodega]
+           ,[descripcion])
+     VALUES
+           ('001'
+           ,'1'
+           ,'BODEGA 1');
+
+
 create table articulo(
 cia char(3),
 codArticulo varchar(10),
 desArticulo varchar(50),
 unidad char(3),
+costo money,
+precio money,
 primary key (cia,codArticulo)
 );
+
+INSERT INTO [dbo].[articulo]
+           ([cia]
+           ,[codArticulo]
+           ,[desArticulo]
+           ,[unidad]
+           ,[costo]
+           ,[precio])
+     VALUES
+           ('001'
+           ,'1'
+           ,'LAPIZ'
+           ,'UND'
+           ,50
+           ,100);
+
 
 create table articuloBodega(
 cia char(3),
@@ -123,6 +442,187 @@ codBodega char(3),
 cantidad float,
 primary key (cia,codArticulo,codBodega)
 );
+INSERT INTO [dbo].[articuloBodega]
+           ([cia]
+           ,[codArticulo]
+           ,[codBodega]
+           ,[cantidad])
+     VALUES
+           ('001'
+           ,'1'
+           ,'1'
+           ,'10');
+
+CREATE TABLE proveedor(
+cia char(3),
+codProveedor varchar(10),
+nombre varchar(50),
+nombreComercial varchar(50),
+tipoCedula char(2),
+cedula varchar(12),
+telefono varchar(10),
+fax varchar(10),
+direccion varchar(100),
+correo varchar(30),
+provincia char(2),
+canton char(2),
+distrito char(2),
+barrio char(2),
+pais char(3),
+codigoActividad varchar(20),
+estado char(1)
+primary key (cia,codProveedor)
+);
+
+INSERT INTO [dbo].[proveedor]
+           ([cia]
+           ,[codProveedor]
+           ,[nombre]
+           ,[nombreComercial]
+           ,[tipoCedula]
+           ,[cedula]
+           ,[telefono]
+           ,[fax]
+           ,[direccion]
+           ,[correo]
+           ,[provincia]
+           ,[canton]
+           ,[distrito]
+           ,[barrio]
+           ,[pais]
+           ,[codigoActividad]
+           ,[estado])
+     VALUES
+           ('001','1','Carlos Fernandez','Carlos Fernandez','02','3116620079','86185765','86185765','El Roble'
+			,'pedros@gmail.com','01','01','01','01','001','1002','A');
+
+create table moneda(
+cia char(3),
+codigo char(3),
+descripcion varchar(10)
+primary key (cia,codigo)
+);
+
+insert into moneda(cia,codigo,descripcion)
+values('001','CRC','Colones');
+insert into moneda(cia,codigo,descripcion)
+values('001','USD','Dolares');
+
+create table tipodocumento(
+cia char(3),
+tipo char(2),
+clase char(1),
+descripcion varchar(20),
+tipoFe char(2)
+primary key (cia,tipo)
+);
+insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
+values('001','FO','F','Factura Contado','04');
+insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
+values('001','FC','F','Factura Credito','01');
+insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
+values('001','DO','D','Devolucion Contrado','03');
+insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
+values('001','DC','D','Devolucion Credito','03');
+
+CREATE TABLE CXC_MOVIMIENTO
+(
+  COD_CIA          CHAR(3)                 NOT NULL,
+  TIP_DOC          CHAR(3)                 NOT NULL,
+  NUM_DOC          NUMERic(10)                   NOT NULL,
+  FEC_DOC          DATE                         NOT NULL,
+  FEC_INT          DATE                         NOT NULL,
+  FEC_VENCE        DATE                         NOT NULL,
+  ANO_FISCAL       NUMeric(4)                    NOT NULL,
+  PER_PROCESO      NUMeric(2)                    NOT NULL,
+  COD_CLIENTE      VARCHAR(25)            NOT NULL,
+  LINEA            CHAR(3)                 NOT NULL,
+  PERSONA          VARCHAR(25),
+  COD_AGENTE       VARCHAR(3)             NOT NULL,
+  COD_MONEDA       VARCHAR(3)             NOT NULL,
+  TIP_CAMBIO       NUMERIC(14,4)                 NOT NULL,
+  TIP_CAMBIO_BASE  NUMERIC(14,4)                 NOT NULL,
+  DES_OBSERVACION  VARCHAR(240),
+  ESTADO           CHAR(1)                 NOT NULL,
+  MON_SALDO        NUMERIC(14,2)                 NOT NULL,
+  DOC_REF          VARCHAR(10),
+  FEC_REG          DATE                         NOT NULL,
+)
+
+ CREATE TABLE INV_MOVIMIENTO 
+   (	
+   COD_CIA CHAR(3), 
+	TIP_MOVTO CHAR(1), 
+	COD_MOVTO CHAR(2), 
+	NUM_DOCTO VARCHAR(10), 
+	FEC_MOVTO DATE, 
+	COD_PROVEEDOR VARCHAR(25), 
+	COD_MONEDA VARCHAR(3), 
+	DOC_REFEREN VARCHAR(10), 
+	ANO_FISCAL NUMERIC(4,0), 
+	PER_PROCESO NUMERIC(2,0), 
+	DES_OBSERVACION VARCHAR(300), 
+	CCOSTO VARCHAR(7), 
+	ESTADO CHAR(1), 
+	COD_USUARIO VARCHAR(30), 
+	TIP_CAMBIO NUMERIC(14,4) 
+	)
+
+	CREATE TABLE INV_DETMOVIMIENTO 
+   (	
+    COD_CIA CHAR(3), 
+	TIP_MOVTO CHAR(1), 
+	COD_MOVTO CHAR(2), 
+	NUM_DOCTO VARCHAR(10), 
+	COD_BODEGA CHAR(3), 
+	COD_LOTE VARCHAR(15), 
+	COD_ARTICULO VARCHAR(25), 
+	MEDIDA VARCHAR(5), 
+	DOC_REFEREN VARCHAR(10), 
+    CAN_ARTICULO NUMERIC(14,4), 
+	CAN_DESPACHADA NUMERIC(14,4), 
+    LOCALIZA VARCHAR(8), 
+	CCOSTO VARCHAR(7), 
+	IMPUESTO_VTAS NUMERIC(14,4), 
+	SUB_TOTAL NUMERIC(14,4)
+	)
+
+	create table ListaPrecio(
+	cia char(3),
+	codigo char(3),
+	descripcion varchar(20)
+	primary key (cia,codigo)
+	)
+
+	INSERT INTO [dbo].[ListaPrecio]
+           ([cia]
+           ,[codigo]
+           ,[descripcion])
+     VALUES
+           ('001'
+           ,'001'
+           ,'Principal');
+
+	create table detalleListaPrecio(
+	cia char(3),
+	codLista char(3),
+	codArticulo varchar(10),
+	precio money
+	primary key (cia,codLista,codArticulo)
+	)
+
+	INSERT INTO [dbo].[detalleListaPrecio]
+           ([cia]
+           ,[codLista]
+           ,[codArticulo]
+           ,[precio])
+     VALUES
+           ('001'
+           ,'001'
+           ,'1'
+           ,200);
+
+
 
 CREATE PROCEDURE PA_SeleccionarClientes
 	(@cia char(3))
@@ -133,5 +633,380 @@ BEGIN
 	SET NOCOUNT ON;
 
    Select * from cliente where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_ObtenerClientes
+	(@cia char(3),
+	 @filtro varchar(50))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from cliente 
+   where cia = @cia
+   and (cedula = @filtro or nombre like '%' + @filtro + '%');
+END
+GO
+CREATE PROCEDURE PA_SeleccionarArticulos
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from articulo where cia = @cia;
+END
+GO
+
+CREATE PROCEDURE PA_ObtenerCantidadArticulo
+	(@cia char(3),
+	 @articulo varchar(10))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select sum(cantidad) as cantidad from articuloBodega 
+   where cia = @cia
+   and codArticulo = @articulo;
+END
+GO
+CREATE PROCEDURE PA_ObtenerArticulos
+	(@cia char(3),
+	 @filtro varchar(50))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from articulo 
+   where cia = @cia
+   and (codArticulo = @filtro or desArticulo like '%' + @filtro + '%');
+END
+GO
+CREATE PROCEDURE PA_SeleccionarProveedores
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from proveedor where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_InsertarProveedor
+	(@cia char(3),
+	 @codProveedor varchar(10),
+	 @nombre varchar(50),
+	 @nombreComercial varchar(50),
+	 @tipoCedula char(2),
+	 @cedula varchar(12),
+	 @telefono varchar(10),
+	 @fax varchar(10),
+	 @direccion varchar(100),
+	 @correo varchar(30),
+	 @provincia char(2),
+	 @canton char(2),
+	 @distrito char(2),
+	 @barrio char(2),
+	 @pais char(2),
+	 @codigoActividad varchar(20),
+	 @estado char(1))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+INSERT INTO [dbo].[proveedor]
+           ([cia]
+           ,[codProveedor]
+           ,[nombre]
+           ,[nombreComercial]
+           ,[tipoCedula]
+           ,[cedula]
+           ,[telefono]
+           ,[fax]
+           ,[direccion]
+           ,[correo]
+           ,[provincia]
+           ,[canton]
+           ,[distrito]
+           ,[barrio]
+           ,[pais]
+           ,[codigoActividad]
+           ,[estado])
+     VALUES
+           (@cia
+           ,@codProveedor
+           ,@nombre
+           ,@nombreComercial
+           ,@tipoCedula
+           ,@cedula
+           ,@telefono
+           ,@fax
+           ,@direccion
+           ,@correo
+           ,@provincia
+           ,@canton
+           ,@distrito
+           ,@barrio
+           ,@pais
+           ,@codigoActividad
+           ,@estado);
+END
+GO
+CREATE PROCEDURE PA_ObtenerProveedores
+	(@cia char(3),
+	 @filtro varchar(50))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from proveedor 
+   where cia = @cia
+   and (codProveedor = @filtro or nombre like '%' + @filtro + '%');
+END
+GO
+CREATE PROCEDURE PA_SeleccionarFacturas
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from factura where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarPedidos
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from pedido where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarDevoluciones
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from devolucion where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarCompras
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from compras where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarMoneda
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from moneda where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarTipoDoc
+	(@cia char(3),
+	 @clase char(1))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from tipodocumento 
+   where cia = @cia 
+   And clase = @clase
+   order by descripcion;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarCompania
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from compania;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarUsuario
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from usuario where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarCaja
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from caja where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_ObtenerCaja
+	(@cia char(3),
+	@caja char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from caja where cia = @cia and caja = @caja;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarVendedor
+	(@cia char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from vendedor where cia = @cia;
+END
+GO
+CREATE PROCEDURE PA_ValidaUsuario
+	(@usuario varchar(20),
+	 @contrasena varchar(20))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	Select u.cia,u.usuario,u.tipo,v.codigo,v.nombre,v.caja from usuario u
+	inner join vendedor v
+	on u.cia = v.cia 
+	and u.usuario=v.usuario
+	where upper(u.usuario) = upper(@usuario)
+	and upper(u.contrasena) = upper(@contrasena);
+END
+GO
+CREATE PROCEDURE PA_SeleccionarPais
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from gen_pais;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarProvincia
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from gen_provincia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarCanton
+(@provincia varchar(2))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from gen_canton where cod_provincia = @provincia;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarDistrito
+(@provincia varchar(2),
+ @canton varchar(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from gen_distrito 
+   where cod_provincia = @provincia
+   and cod_canton = @canton;
+END
+GO
+
+CREATE PROCEDURE PA_SeleccionarBarrio
+(@provincia varchar(2),
+ @canton varchar(3),
+ @distrito varchar(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from gen_barrio
+   where cod_provincia = @provincia
+   and cod_canton = @canton
+   and cod_distrito = @distrito;
+END
+GO
+CREATE PROCEDURE PA_SeleccionarListaPrecio
+(@cia char(3),
+ @filtro char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from ListaPrecio 
+   where cia = @cia
+    and codigo like '%' + @filtro + '%';
+END
+GO
+CREATE PROCEDURE PA_ObtenerDetalleListaPrecio
+(@cia char(3),
+ @codigo char(3),
+ @codArticulo char(3))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from detalleListaPrecio
+   where cia = @cia
+   and codLista = @codigo
+   and codArticulo = @codArticulo;
 END
 GO

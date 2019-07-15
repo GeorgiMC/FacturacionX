@@ -16,5 +16,16 @@ namespace FacturacionWF
         {
             InitializeComponent();
         }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Inven frm = new Inven();
+            frm.Show();
+        }
     }
 }

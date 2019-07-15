@@ -5,3 +5,24 @@ D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.dll
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.pdb
 D:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Georgi MC\Desktop\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaLogica.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\bin\Debug\CapaDatos.pdb
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.dll
+E:\Proyecto Final\Facturacion\FacturacionWF\CapaLogica\obj\Debug\CapaLogica.pdb

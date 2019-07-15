@@ -19,7 +19,7 @@ namespace CapaDatos
         {
             Database db = DatabaseFactory.CreateDatabase("Default");
 
-            SqlCommand comando = new SqlCommand("PA_SeleccionarCompras");
+            SqlCommand comando = new SqlCommand("PA_SeleccionarUsuario");
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@cia", cia);
             DataSet ds = db.ExecuteReader(comando, "usuario");
@@ -35,13 +35,12 @@ namespace CapaDatos
             DataSet ds = db.ExecuteReader(comando, "usuario");
             return ds;
         }
-        public static DataSet SeleccionarInicioSesion(string cia,string usuario,string contrasena)
+        public static DataSet ValidaUsuario(string usuario,string contrasena)
         {
             Database db = DatabaseFactory.CreateDatabase("Default");
 
-            SqlCommand comando = new SqlCommand("PA_SeleccionarInicioSesion");
+            SqlCommand comando = new SqlCommand("PA_ValidaUsuario");
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@cia", cia);
             comando.Parameters.AddWithValue("@usuario", usuario);
             comando.Parameters.AddWithValue("@contrasena", contrasena);
             DataSet ds = db.ExecuteReader(comando, "usuario");

@@ -12,6 +12,7 @@ namespace FacturacionWF
 {
     public partial class FacturarPedido : Form
     {
+        public string articuloSeleccionado = "";
         public FacturarPedido()
         {
             InitializeComponent();
@@ -19,7 +20,16 @@ namespace FacturacionWF
 
         private void btnBuscarClie_Click(object sender, EventArgs e)
         {
-            ListaClientes frm = new ListaClientes();
+            AgregaCliente frm = new AgregaCliente("FP");
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            AddOwnedForm(frm);
+            frm.ShowDialog();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregaArticulo frm = new AgregaArticulo("FP");
+            frm.StartPosition = FormStartPosition.CenterScreen;
             AddOwnedForm(frm);
             frm.ShowDialog();
         }

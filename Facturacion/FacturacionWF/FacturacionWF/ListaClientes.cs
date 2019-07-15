@@ -20,17 +20,37 @@ namespace FacturacionWF
             cargaDatos();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Factura frm = (Factura)Owner;
-            frm.lblSubtotal.Text = txtCodCliente.Text;
-            this.Close();
-        }
-
         public void cargaDatos()
         {
             dgvClientes.AutoGenerateColumns = false;
-            dgvClientes.DataSource = clienteLogica.SeleccionarClientes("001");
+            dgvClientes.DataSource = clienteLogica.SeleccionarClientes(Global.GlobalUser.cia);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvClientes.AutoGenerateColumns = false;
+            dgvClientes.DataSource = clienteLogica.ObtenerCliente(Global.GlobalUser.cia,txtCliente.Text);
+        }
+
+        private void dgvClientes_DoubleClick(object sender, EventArgs e)
+        {
+            string codigo = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+            Cliente frm = new Cliente("M", codigo);
+            frm.Show();
+        }
+
+        private void txtAgregar_Click(object sender, EventArgs e)
+        {
+            Cliente frm = new Cliente();
+            MenuPrincipal f1 = Application.OpenForms.OfType<MenuPrincipal>().SingleOrDefault();
+            f1.AbrirPantall(frm);
+        }
+
+        public void usar()
+        {
+            Factura frm = (Factura)Owner;
+            frm.lblSubtotal.Text = txtCliente.Text;
+            this.Close();
         }
     }
 }

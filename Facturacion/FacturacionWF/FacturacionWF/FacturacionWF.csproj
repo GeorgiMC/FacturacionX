@@ -52,17 +52,41 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregaArticulo.Designer.cs">
+      <DependentUpon>AgregaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregaCliente.Designer.cs">
+      <DependentUpon>AgregaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Articulo.Designer.cs">
       <DependentUpon>Articulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CierreCaja.Designer.cs">
+      <DependentUpon>CierreCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compania.Designer.cs">
+      <DependentUpon>Compania.cs</DependentUpon>
     </Compile>
     <Compile Include="Compra.cs">
       <SubType>Form</SubType>
@@ -100,6 +124,18 @@
     <Compile Include="FacturarPedido.Designer.cs">
       <DependentUpon>FacturarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inven.Designer.cs">
+      <DependentUpon>Inven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaArticulo.Designer.cs">
+      <DependentUpon>ListaArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +172,35 @@
     <Compile Include="ListadoPedidos.Designer.cs">
       <DependentUpon>ListadoPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProveedores.Designer.cs">
+      <DependentUpon>ListaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaUsuarios.Designer.cs">
+      <DependentUpon>ListaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovimientosCredito.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MovimientosCredito.Designer.cs">
       <DependentUpon>MovimientosCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pago.Designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedido.cs">
       <SubType>Form</SubType>
@@ -150,11 +210,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregaArticulo.resx">
+      <DependentUpon>AgregaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregaCliente.resx">
+      <DependentUpon>AgregaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articulo.resx">
       <DependentUpon>Articulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CierreCaja.resx">
+      <DependentUpon>CierreCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compania.resx">
+      <DependentUpon>Compania.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compra.resx">
       <DependentUpon>Compra.cs</DependentUpon>
@@ -177,8 +261,14 @@
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inven.resx">
+      <DependentUpon>Inven.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaArticulo.resx">
+      <DependentUpon>ListaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>
@@ -192,8 +282,20 @@
     <EmbeddedResource Include="ListadoPedidos.resx">
       <DependentUpon>ListadoPedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaProveedores.resx">
+      <DependentUpon>ListaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaUsuarios.resx">
+      <DependentUpon>ListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MovimientosCredito.resx">
       <DependentUpon>MovimientosCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
@@ -207,6 +309,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
