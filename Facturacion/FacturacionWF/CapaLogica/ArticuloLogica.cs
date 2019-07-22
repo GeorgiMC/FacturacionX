@@ -25,6 +25,8 @@ namespace CapaLogica
                 obj.cantidad = ObtenerCantidadArticulos(cia, row["codArticulo"].ToString());
                 obj.costo = float.Parse(row["costo"].ToString());
                 obj.precio = float.Parse(row["precio"].ToString());
+                obj.impuesto = row["impuesto"].ToString();
+                obj.tipo = row["tipo"].ToString();
                 lista.Add(obj);
             }
             return lista;
@@ -57,6 +59,42 @@ namespace CapaLogica
                 obj.cantidad = ObtenerCantidadArticulos(cia, row["codArticulo"].ToString());
                 obj.costo = float.Parse(row["costo"].ToString());
                 obj.precio = float.Parse(row["precio"].ToString());
+                obj.impuesto = row["impuesto"].ToString();
+                obj.tipo = row["tipo"].ToString();
+                lista.Add(obj);
+            }
+            return lista;
+        }
+
+        public List<ImpuestoDatos> ObtenerImpuesto(string cia, string filtro)
+        {
+            List<ImpuestoDatos> lista = new List<ImpuestoDatos>();
+            DataSet ds = ImpuestoDatos.ObtenerImpuesto(cia, filtro);
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                ImpuestoDatos obj = new ImpuestoDatos();
+                obj.cia = row["cia"].ToString();
+                obj.codigo = row["codigo"].ToString();
+                obj.descripcion = row["descripcion"].ToString();
+                obj.porcentaje = Convert.ToDouble(row["porcentaje"]);
+                obj.impuestoFe = row["impuestoFe"].ToString();
+                lista.Add(obj);
+            }
+            return lista;
+        }
+        public List<TipoArticuloDatos> ObtenerTipoArticulo(string cia, string filtro)
+        {
+            List<TipoArticuloDatos> lista = new List<TipoArticuloDatos>();
+            DataSet ds = TipoArticuloDatos.ObtenerTipoArticulo(cia, filtro);
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                TipoArticuloDatos obj = new TipoArticuloDatos();
+                obj.cia = row["cia"].ToString();
+                obj.codigo = row["codigo"].ToString();
+                obj.descripcion = row["descripcion"].ToString();
+                obj.afecta = row["afecta"].ToString();
                 lista.Add(obj);
             }
             return lista;

@@ -17,6 +17,8 @@ namespace CapaDatos
         public float cantidad { get; set; }
         public float costo { get; set; }
         public float precio { get; set; }
+        public string impuesto { get; set; }
+        public string tipo { get; set; }
 
         public static DataSet SeleccionarTodos(string cia)
         {

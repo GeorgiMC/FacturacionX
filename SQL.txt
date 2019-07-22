@@ -118,6 +118,217 @@ insert into cliente(cia,codCliente,nombre,nombreComercial,tipoCedula,cedula,tele
 ('001','1','Georgi Mesen','Georgi Mesen','01','116620079','86185765','86185765','El Roble'
 ,'smesecerjor@gmail.com','01','01','01','01','001','A','001');
 
+CREATE TABLE [dbo].[VENDOCENCFED](
+	[CIA] [char](3) NOT NULL,
+	[CLAVE] [varchar](50) NOT NULL,
+	[NUMEROCONSECUTIVO] [varchar](20) NOT NULL,
+	[FECHAEMISION] [varchar](40) NOT NULL,
+	[TIPODOC] [char](2) NULL,
+	[EMISOR_NOMBRE] [varchar](80) NOT NULL,
+	[EMISOR_ID_TIPO] [varchar](2) NOT NULL,
+	[EMISOR_ID_NUMERO] [varchar](12) NOT NULL,
+	[EMISOR_NOMBRECOMERCIAL] [varchar](80) NULL,
+	[EMISOR_UBIC_PROVINCIA] [varchar](1) NOT NULL,
+	[EMISOR_UBIC_CANTON] [varchar](2) NOT NULL,
+	[EMISOR_UBIC_DISTRITO] [varchar](2) NOT NULL,
+	[EMISOR_UBIC_BARRIO] [varchar](2) NULL,
+	[EMISOR_UBIC_OTRASSENAS] [varchar](160) NOT NULL,
+	[EMISOR_TEL_CODIGOPAIS] [numeric](3, 0) NULL,
+	[EMISOR_TEL_NUMTELEFONO] [numeric](20, 0) NULL,
+	[EMISOR_FAX_CODIGOPAIS] [numeric](3, 0) NULL,
+	[EMISOR_FAX_NUMTELEFONO] [numeric](20, 0) NULL,
+	[EMISOR_CORREOELECTRONICO] [varchar](60) NOT NULL,
+	[RECEPTOR_NOMBRE] [varchar](80) NOT NULL,
+	[RECEPTOR_ID_TIPO] [varchar](2) NULL,
+	[RECEPTOR_ID_NUMERO] [varchar](12) NULL,
+	[RECEPTOR_IDEXTRANJERO] [varchar](20) NULL,
+	[RECEPTOR_NOMBRECOMERCIAL] [varchar](80) NULL,
+	[RECEPTOR_UBIC_PROVINCIA] [varchar](1) NULL,
+	[RECEPTOR_UBIC_CANTON] [varchar](2) NULL,
+	[RECEPTOR_UBIC_DISTRITO] [varchar](2) NULL,
+	[RECEPTOR_UBIC_BARRIO] [varchar](2) NULL,
+	[RECEPTOR_UBIC_OTRASSENAS] [varchar](160) NULL,
+	[RECEPTOR_TEL_CODIGOPAIS] [numeric](3, 0) NULL,
+	[RECEPTOR_TEL_NUMTELEFONO] [numeric](20, 0) NULL,
+	[RECEPTOR_FAX_CODIGOPAIS] [numeric](3, 0) NULL,
+	[RECEPTOR_FAX_NUMTELEFONO] [numeric](20, 0) NULL,
+	[RECEPTOR_CORREOELECTRONICO] [varchar](60) NULL,
+	[CONDICIONVENTA] [varchar](2) NOT NULL,
+	[PLAZOCREDITO] [varchar](10) NULL,
+	[CODIGOMONEDA] [varchar](3) NULL,
+	[TIPOCAMBIO] [numeric](18, 5) NULL,
+	[TOTALSERVGRAVADOS] [numeric](18, 5) NULL,
+	[TOTALSERVEXENTOS] [numeric](18, 5) NULL,
+	[TOTALMERCANCIASGRAVADAS] [numeric](18, 5) NULL,
+	[TOTALMERCANCIASEXENTAS] [numeric](18, 5) NULL,
+	[TOTALGRAVADO] [numeric](18, 5) NULL,
+	[TOTALEXENTO] [numeric](18, 5) NULL,
+	[TOTALVENTA] [numeric](18, 5) NULL,
+	[TOTALDESCUENTOS] [numeric](18, 5) NULL,
+	[TOTALVENTANETA] [numeric](18, 5) NOT NULL,
+	[TOTALCOMPROBANTE] [numeric](18, 5) NOT NULL,
+	[INFOREF_TIPODOC] [varchar](2) NULL,
+	[INFOREF_NUMERO] [varchar](50) NULL,
+	[INFOREF_FECHAEMISION] [varchar](40) NULL,
+	[INFOREF_CODIGO] [varchar](2) NULL,
+	[INFOREF_RAZON] [varchar](180) NULL,
+	[NORMAVIGENTE_NUMRESOLUCION] [varchar](13) NOT NULL,
+	[NORMAVIGENTE_FECHARESOLUCION] [varchar](20) NOT NULL,
+	[DOCUMENTO] [varchar](10) NULL,
+	[ESTADO] [char](1) NOT NULL,
+	[TOTALIMPUESTO] [numeric](18, 5) NULL,
+	[IMPRESO] [char](1) NULL,
+	[MENSAJE_HACIENDA] [nvarchar](3064) NULL,
+	[ESTADO_CLIENTE] [char](2) NULL,
+	[INFOREF_DOC] [varchar](10) NULL,
+	[REGENERADO] [char](1) NULL,
+	[DOCDEBITO] [varchar](20) NULL,
+	[DOCCREDITO] [varchar](20) NULL,
+	[ESTADO_HACIENDA] [char](1) NULL,
+	[OBSERVACION] [nvarchar](1024) NULL,
+	[TotalServExonerado] [numeric](18, 5) NULL,
+	[TotalMercExonerada] [numeric](18, 5) NULL,
+	[TotalExonerado] [numeric](18, 5) NULL,
+	[TotalIVADevuelto] [numeric](18, 5) NULL,
+	[TotalOtrosCargos] [numeric](18, 5) NULL,
+	[TIPO_DOC] [char](2) NULL,
+	[ENVIO_CORREO] [char](1) NULL,
+ CONSTRAINT [PK_VENDOCENCFED] PRIMARY KEY CLUSTERED 
+(
+	[CLAVE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF__VENDOCENC__ESTAD__7E514AE4]  DEFAULT ('P') FOR [ESTADO]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF__VENDOCENC__IMPRE__7F456F1D]  DEFAULT ('N') FOR [IMPRESO]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF__VENDOCENC__ESTAD__00399356]  DEFAULT ('P') FOR [ESTADO_CLIENTE]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF__VENDOCENC__REGEN__012DB78F]  DEFAULT ('N') FOR [REGENERADO]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF_VENDOCENCFED_TotalServExonerado]  DEFAULT ((0)) FOR [TotalServExonerado]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF_VENDOCENCFED_TotalMercExonerada]  DEFAULT ((0)) FOR [TotalMercExonerada]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF_VENDOCENCFED_TotalExonerado]  DEFAULT ((0)) FOR [TotalExonerado]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF_VENDOCENCFED_TotalIVADevuelto]  DEFAULT ((0)) FOR [TotalIVADevuelto]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  CONSTRAINT [DF_VENDOCENCFED_TotalOtrosCargos]  DEFAULT ((0)) FOR [TotalOtrosCargos]
+GO
+
+ALTER TABLE [dbo].[VENDOCENCFED] ADD  DEFAULT ('N') FOR [ENVIO_CORREO]
+GO
+
+
+
+CREATE TABLE [dbo].[VENDOCDETFED](
+	[CIA] [char](3) NOT NULL,
+	[CLAVE] [varchar](50) NOT NULL,
+	[LINEADETALLE] [numeric](4, 0) NOT NULL,
+	[CODIGO_TIPO] [varchar](2) NOT NULL,
+	[CODIGO_COD] [varchar](50) NOT NULL,
+	[CANTIDAD] [numeric](18, 4) NOT NULL,
+	[UNIDADMEDIDA] [varchar](15) NOT NULL,
+	[UNIDADMEDIDACOMERCIAL] [varchar](20) NULL,
+	[DETALLE] [varchar](160) NULL,
+	[PRECIOUNITARIO] [numeric](18, 5) NOT NULL,
+	[MONTOTOTAL] [numeric](18, 5) NOT NULL,
+	[MONTODESCUENTO] [numeric](18, 5) NULL,
+	[NATURALEZADESCUENTO] [varchar](80) NULL,
+	[SUBTOTAL] [numeric](18, 5) NOT NULL,
+	[TOTALIMPUESTOS] [numeric](18, 5) NOT NULL,
+	[MONTOTOTALLINEA] [numeric](18, 5) NOT NULL,
+	[BaseImponible] [numeric](18, 5) NULL,
+	[PartidaArancelaria] [varchar](12) NULL,
+ CONSTRAINT [PK_VENDOCDETFED] PRIMARY KEY CLUSTERED 
+(
+	[CLAVE] ASC,
+	[LINEADETALLE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[VENDOCDETFED] ADD  CONSTRAINT [DF_VENDOCDETFED_BaseImponible]  DEFAULT ((0)) FOR [BaseImponible]
+GO
+
+ALTER TABLE [dbo].[VENDOCDETFED]  WITH CHECK ADD  CONSTRAINT [FK__VENDOCDET__CLAVE__19F96559] FOREIGN KEY([CLAVE])
+REFERENCES [dbo].[VENDOCENCFED] ([CLAVE])
+GO
+
+ALTER TABLE [dbo].[VENDOCDETFED] CHECK CONSTRAINT [FK__VENDOCDET__CLAVE__19F96559]
+GO
+
+CREATE TABLE [dbo].[VENDOCDETIMPFED](
+	[CIA] [char](3) NOT NULL,
+	[CLAVE] [varchar](50) NOT NULL,
+	[LINEADETALLE] [numeric](4, 0) NOT NULL,
+	[CODIGO] [varchar](2) NOT NULL,
+	[TARIFA] [numeric](4, 2) NOT NULL,
+	[MONTO] [numeric](13, 5) NOT NULL,
+	[EXONERA_TIPODOC] [varchar](2) NULL,
+	[EXONERA_NUMDOC] [varchar](17) NULL,
+	[EXONERA_NOMINSTIT] [varchar](100) NULL,
+	[EXONERA_FECHAEMISION] [varchar](40) NULL,
+	[EXONERA_MONTOIMP] [numeric](13, 5) NULL,
+	[EXONERA_PORCCOMPRA] [numeric](3, 0) NULL,
+	[CodigoTarifa] [varchar](2) NULL,
+	[FactorIVA] [numeric](18, 5) NULL,
+ CONSTRAINT [PK_VENDOCDETIMPFED] PRIMARY KEY CLUSTERED 
+(
+	[CLAVE] ASC,
+	[LINEADETALLE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[VENDOCDETIMPFED] ADD  CONSTRAINT [DF_VENDOCDETIMPFED_FactorIVA]  DEFAULT ((0)) FOR [FactorIVA]
+GO
+
+ALTER TABLE [dbo].[VENDOCDETIMPFED]  WITH CHECK ADD  CONSTRAINT [FK__VENDOCDET__CLAVE__1AED8992] FOREIGN KEY([CLAVE])
+REFERENCES [dbo].[VENDOCENCFED] ([CLAVE])
+GO
+
+ALTER TABLE [dbo].[VENDOCDETIMPFED] CHECK CONSTRAINT [FK__VENDOCDET__CLAVE__1AED8992]
+GO
+
+CREATE TABLE [dbo].[VENDOCDETOTR](
+	[CIA] [char](3) NULL,
+	[SECUENCIA] [numeric](10, 0) NULL,
+	[CLAVE] [varchar](50) NULL,
+	[DESCRIPCION] [varchar](50) NULL,
+	[VALOR] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[VENDOCMEDIOSPAGO](
+	[CIA] [char](3) NOT NULL,
+	[CLAVE] [varchar](50) NOT NULL,
+	[CONCEPTO] [varchar](15) NOT NULL,
+ CONSTRAINT [PK_VENDOCMEDIOSPAGO] PRIMARY KEY CLUSTERED 
+(
+	[CLAVE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[VENDOCMEDIOSPAGO]  WITH CHECK ADD  CONSTRAINT [FK__VENDOCMED__CLAVE__1BE1ADCB] FOREIGN KEY([CLAVE])
+REFERENCES [dbo].[VENDOCENCFED] ([CLAVE])
+GO
+
+ALTER TABLE [dbo].[VENDOCMEDIOSPAGO] CHECK CONSTRAINT [FK__VENDOCMED__CLAVE__1BE1ADCB]
+GO
+
 create table factura(
 cia char(3),
 tipo varchar(5),
@@ -147,59 +358,6 @@ totalComprobante money
 primary key (cia,documento,caja)
 );
 
-INSERT INTO [dbo].[factura]
-           ([cia]
-           ,[tipo]
-           ,[documento]
-           ,[caja]
-           ,[fecha]
-           ,[codCliente]
-           ,[pago]
-           ,[agente]
-           ,[moneda]
-           ,[cambio]
-           ,[descripcion]
-           ,[referencia]
-           ,[estado]
-           ,[facturaDigital]
-           ,[servGravados]
-           ,[servExentos]
-           ,[mercGravadas]
-           ,[mercExentas]
-           ,[totalExenta]
-           ,[totalGravadas]
-           ,[totalVenta]
-           ,[totalDescuento]
-           ,[totalVentaNeta]
-           ,[totalImpuesto]
-           ,[totalComprobante])
-     VALUES
-           (<cia, char(3),>
-           ,<tipo, varchar(5),>
-           ,<documento, varchar(10),>
-           ,<caja, char(3),>
-           ,<fecha, datetime,>
-           ,<codCliente, varchar(10),>
-           ,<pago, varchar(5),>
-           ,<agente, char(3),>
-           ,<moneda, char(3),>
-           ,<cambio, money,>
-           ,<descripcion, varchar(100),>
-           ,<referencia, varchar(10),>
-           ,<estado, char(1),>
-           ,<facturaDigital, char(1),>
-           ,<servGravados, money,>
-           ,<servExentos, money,>
-           ,<mercGravadas, money,>
-           ,<mercExentas, money,>
-           ,<totalExenta, money,>
-           ,<totalGravadas, money,>
-           ,<totalVenta, money,>
-           ,<totalDescuento, money,>
-           ,<totalVentaNeta, money,>
-           ,<totalImpuesto, money,>
-           ,<totalComprobante, money,>);
-
 create table detalleFactura(
 cia char(3),
 documento varchar(10),
@@ -207,7 +365,7 @@ secuencia int,
 articulo varchar(20),
 porcDescuento float,
 porcImpuesto float,
-unidadMedida float,
+unidadMedida varchar(10),
 cantidad float,
 costo float,
 precio money,
@@ -217,37 +375,6 @@ total money,
 descripcion varchar(50),
 primary key (cia,documento,secuencia)
 );
-
-INSERT INTO [dbo].[detalleFactura]
-           ([cia]
-           ,[documento]
-           ,[secuencia]
-           ,[articulo]
-           ,[porcDescuento]
-           ,[porcImpuesto]
-           ,[unidadMedida]
-           ,[cantidad]
-           ,[costo]
-           ,[precio]
-           ,[montoImpuesto]
-           ,[montoDescuento]
-           ,[total]
-           ,[descripcion])
-     VALUES
-           (<cia, char(3),>
-           ,<documento, varchar(10),>
-           ,<secuencia, int,>
-           ,<articulo, varchar(20),>
-           ,<porcDescuento, float,>
-           ,<porcImpuesto, float,>
-           ,<unidadMedida, float,>
-           ,<cantidad, float,>
-           ,<costo, float,>
-           ,<precio, money,>
-           ,<montoImpuesto, money,>
-           ,<montoDescuento, money,>
-           ,<total, money,>
-           ,<descripcion, varchar(50),>);
 
 create table pedido(
 cia char(3),
@@ -285,7 +412,7 @@ secuencia int,
 articulo varchar(20),
 porcDescuento float,
 porcImpuesto float,
-unidadMedida float,
+unidadMedida varchar(10),
 cantidad float,
 costo float,
 precio money,
@@ -333,7 +460,7 @@ secuencia int,
 articulo varchar(20),
 porcDescuento float,
 porcImpuesto float,
-unidadMedida float,
+unidadMedida varchar(10),
 cantidad float,
 costo float,
 precio money,
@@ -381,7 +508,7 @@ secuencia int,
 articulo varchar(20),
 porcDescuento float,
 porcImpuesto float,
-unidadMedida float,
+unidadMedida varchar(10),
 cantidad float,
 costo float,
 precio money,
@@ -416,6 +543,8 @@ desArticulo varchar(50),
 unidad char(3),
 costo money,
 precio money,
+impuesto char(2),
+tipo char(3)
 primary key (cia,codArticulo)
 );
 
@@ -425,14 +554,17 @@ INSERT INTO [dbo].[articulo]
            ,[desArticulo]
            ,[unidad]
            ,[costo]
-           ,[precio])
+           ,[precio]
+           ,[tipo])
      VALUES
            ('001'
            ,'1'
            ,'LAPIZ'
            ,'UND'
            ,50
-           ,100);
+           ,100,
+		   '01'
+		   ,'1');
 
 
 create table articuloBodega(
@@ -510,48 +642,60 @@ values('001','USD','Dolares');
 
 create table tipodocumento(
 cia char(3),
-tipo char(2),
+codigo char(2),
+tipo char(1),
 clase char(1),
 descripcion varchar(20),
 tipoFe char(2)
 primary key (cia,tipo)
 );
-insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
-values('001','FO','F','Factura Contado','04');
-insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
-values('001','FC','F','Factura Credito','01');
-insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
-values('001','DO','D','Devolucion Contrado','03');
-insert into tipodocumento(cia,tipo,clase,descripcion,tipoFE)
-values('001','DC','D','Devolucion Credito','03');
+insert into tipodocumento(cia,codigo,tipo,clase,descripcion,tipoFE)
+values('001','FO','O','F','Factura Contado','04');
+insert into tipodocumento(cia,codigo,tipo,clase,descripcion,tipoFE)
+values('001','FC','C','F','Factura Credito','01');
+insert into tipodocumento(cia,codigo,tipo,clase,descripcion,tipoFE)
+values('001','DO','O','D','Devolucion Contrado','03');
+insert into tipodocumento(cia,codigo,tipo,clase,descripcion,tipoFE)
+values('001','DC','C','D','Devolucion Credito','03');
 
 CREATE TABLE CXC_MOVIMIENTO
 (
-  COD_CIA          CHAR(3)                 NOT NULL,
-  TIP_DOC          CHAR(3)                 NOT NULL,
-  NUM_DOC          NUMERic(10)                   NOT NULL,
-  FEC_DOC          DATE                         NOT NULL,
-  FEC_INT          DATE                         NOT NULL,
-  FEC_VENCE        DATE                         NOT NULL,
-  ANO_FISCAL       NUMeric(4)                    NOT NULL,
-  PER_PROCESO      NUMeric(2)                    NOT NULL,
-  COD_CLIENTE      VARCHAR(25)            NOT NULL,
-  LINEA            CHAR(3)                 NOT NULL,
-  PERSONA          VARCHAR(25),
-  COD_AGENTE       VARCHAR(3)             NOT NULL,
-  COD_MONEDA       VARCHAR(3)             NOT NULL,
-  TIP_CAMBIO       NUMERIC(14,4)                 NOT NULL,
-  TIP_CAMBIO_BASE  NUMERIC(14,4)                 NOT NULL,
+  CIA          CHAR(3),
+  TIP_DOC          CHAR(3),
+  NUM_DOC          NUMERic(10),
+  FEC_DOC          DATE,
+  FEC_VENCE        DATE,
+  ANO_FISCAL       NUMeric(4),
+  PER_PROCESO      NUMeric(2),
+  COD_CLIENTE      VARCHAR(25),
+  MONEDA            CHAR(3),
+  COD_AGENTE       VARCHAR(3),
+  TIP_CAMBIO       NUMERIC(14,4),
+  TIP_CAMBIO_BASE  NUMERIC(14,4),
   DES_OBSERVACION  VARCHAR(240),
-  ESTADO           CHAR(1)                 NOT NULL,
-  MON_SALDO        NUMERIC(14,2)                 NOT NULL,
+  ESTADO           CHAR(1),
+  MON_SALDO        NUMERIC(14,2),
   DOC_REF          VARCHAR(10),
-  FEC_REG          DATE                         NOT NULL,
+  FEC_REG          DATE
+);
+
+CREATE TABLE CXC_CREDITO
+(
+  CIA         CHAR(3),
+  MONEDA           CHAR(3),
+  COD_CLIENTE     VARCHAR(25),
+  DIAS_CREDITO    NUMERIC(3),
+  LIMITE_CREDITO  NUMERIC(14,2),
+  INTERES         NUMERIC(5,2),
+  SALDO           NUMERIC(14,2),
+  ESTADO          CHAR(1)     
 )
+insert into cxc_credito(cia,moneda,COD_CLIENTE,DIAS_CREDITO,LIMITE_CREDITO,INTERES,SALDO,ESTADO) 
+values('001','CL','1',30,99999,0,0,'A');
 
  CREATE TABLE INV_MOVIMIENTO 
    (	
-   COD_CIA CHAR(3), 
+    CIA CHAR(3), 
 	TIP_MOVTO CHAR(1), 
 	COD_MOVTO CHAR(2), 
 	NUM_DOCTO VARCHAR(10), 
@@ -570,7 +714,7 @@ CREATE TABLE CXC_MOVIMIENTO
 
 	CREATE TABLE INV_DETMOVIMIENTO 
    (	
-    COD_CIA CHAR(3), 
+    CIA CHAR(3), 
 	TIP_MOVTO CHAR(1), 
 	COD_MOVTO CHAR(2), 
 	NUM_DOCTO VARCHAR(10), 
@@ -622,7 +766,67 @@ CREATE TABLE CXC_MOVIMIENTO
            ,'1'
            ,200);
 
+	create table impuesto(
+	cia char(3),
+	codigo char(2),
+	descripcion varchar(30),
+	porcentaje numeric(10,2),
+	impuestoFe char(2)
+	primary key (cia,codigo)
+	);
 
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','01','Tarifa 0%(Exento)',0,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','02','Tarifa reducida 1%',1,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','03','Tarifa reducida 2%',2,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','04','Tarifa reducida 4%',4,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','05','Tarifa transitorio 0%',0,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','06','Tarifa transitorio 5%',5,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','07','Tarifa transitorio 8%',8,'01');
+	insert into impuesto(cia,codigo,descripcion,porcentaje,impuestoFe)
+	values('001','08','Tarifa gneral 13%',13,'01');
+
+	create table tipoArticulo(
+	cia char(3),
+	codigo char(3),
+	descripcion varchar(20),
+	afecta char(1)
+	primary key (cia,codigo)
+	)
+	
+	insert into tipoArticulo(cia,codigo,descripcion,afecta)
+	values('001','1','Mercancias','S');
+		insert into tipoArticulo(cia,codigo,descripcion,afecta)
+	values('001','2','Servicios','N');
+
+	create table consecutivos(
+	cia char(3),
+	clase char(1),
+	consecutivo numeric(10),
+	caja char(3)
+	primary key (cia,clase,caja)
+	)
+
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','F',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','P',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','C',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','D',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','Z',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','W',1,'001');
+	insert into consecutivos(cia,clase,consecutivo,caja)
+	values('001','X',1,'001');
 
 CREATE PROCEDURE PA_SeleccionarClientes
 	(@cia char(3))
@@ -846,6 +1050,23 @@ BEGIN
    order by descripcion;
 END
 GO
+CREATE PROCEDURE PA_ObtenerTipoDoc
+	(@cia char(3),
+	 @codigo char(2),
+	 @clase char(1))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from tipodocumento 
+   where cia = @cia 
+   and (codigo = @codigo or @codigo is null)
+   And (clase = @clase or @clase is null)
+   order by descripcion;
+END
+GO
 CREATE PROCEDURE PA_SeleccionarCompania
 	(@cia char(3))
 AS
@@ -991,7 +1212,7 @@ BEGIN
 
    Select * from ListaPrecio 
    where cia = @cia
-    and codigo like '%' + @filtro + '%';
+    and (codigo like '%' + @filtro + '%' or @filtro is null);
 END
 GO
 CREATE PROCEDURE PA_ObtenerDetalleListaPrecio
@@ -1008,5 +1229,241 @@ BEGIN
    where cia = @cia
    and codLista = @codigo
    and codArticulo = @codArticulo;
+END
+GO
+CREATE PROCEDURE PA_ObtenerImpuesto
+(@cia char(3),
+ @filtro char(2))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from impuesto 
+   where cia = @cia
+    and (codigo like '%' + @filtro + '%' or @filtro is null);
+END
+GO
+CREATE PROCEDURE PA_ObtenerTipoArticulo
+(@cia char(3),
+ @filtro char(2))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from tipoArticulo 
+   where cia = @cia
+    and (codigo = @filtro or @filtro is null);
+END
+GO
+CREATE PROCEDURE PA_ObtenerConsecutivo
+(@cia char(3),
+ @caja char(3),
+ @clase char(1))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   Select * from consecutivos 
+   where cia = @cia
+    and (caja = @caja or @caja is null)
+	and (clase = @clase or @clase is null);
+END
+GO
+ALTER PROCEDURE PA_ObtenerCredito
+(@cia char(3),
+ @cliente varchar(10),
+ @estado char(1))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   select * from cxc_credito
+	where cia = @cia
+	and (cod_cliente = @cliente or @cliente is null)
+	and (estado = @estado or @estado is null);
+END
+GO
+CREATE PROCEDURE PA_ObtenerMovimientoCredito
+(@cia char(3),
+ @cliente varchar(10),
+ @estado char(1),
+ @documento varchar(10))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	select * from CXC_MOVIMIENTO
+	where cia = @cia
+	and (cod_cliente = @cliente or @cliente is null)
+	and (estado = @estado or @estado is null)
+	and (doc_ref = @documento or @documento is null)
+END
+GO
+CREATE PROCEDURE PA_ActualizarConsecutivo
+(@cia char(3),
+ @caja char(3),
+ @clase char(1),
+ @consecutivo numeric(10))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+	update consecutivos 
+	set consecutivo = @consecutivo
+	where cia = @cia
+	and caja = @caja
+	and clase = @clase;	
+   
+END
+GO
+CREATE PROCEDURE PA_InsertarFactura
+(			@cia char(3)
+           ,@tipo varchar(5)
+           ,@documento varchar(10)
+           ,@caja char(3)
+           ,@fecha datetime
+           ,@codCliente varchar(10)
+           ,@pago varchar(5)
+           ,@agente char(3)
+           ,@moneda char(3)
+           ,@cambio money
+           ,@descripcion varchar(100)
+           ,@referencia varchar(10)
+           ,@estado char(1)
+           ,@facturaDigital char(1)
+           ,@servGravados money
+           ,@servExentos money
+           ,@mercGravadas money
+           ,@mercExentas money
+           ,@totalExenta money
+           ,@totalGravadas money
+           ,@totalVenta money
+           ,@totalDescuento money
+           ,@totalVentaNeta money
+           ,@totalImpuesto money
+           ,@totalComprobante money)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+    INSERT INTO [BDFACTURACION].[dbo].[factura]
+           ([cia]
+           ,[tipo]
+           ,[documento]
+           ,[caja]
+           ,[fecha]
+           ,[codCliente]
+           ,[pago]
+           ,[agente]
+           ,[moneda]
+           ,[cambio]
+           ,[descripcion]
+           ,[referencia]
+           ,[estado]
+           ,[facturaDigital]
+           ,[servGravados]
+           ,[servExentos]
+           ,[mercGravadas]
+           ,[mercExentas]
+           ,[totalExenta]
+           ,[totalGravadas]
+           ,[totalVenta]
+           ,[totalDescuento]
+           ,[totalVentaNeta]
+           ,[totalImpuesto]
+           ,[totalComprobante])
+     VALUES
+           (@cia
+           ,@tipo
+           ,@documento
+           ,@caja
+           ,@fecha
+           ,@codCliente
+           ,@pago
+           ,@agente
+           ,@moneda
+           ,@cambio
+           ,@descripcion
+           ,@referencia
+           ,@estado
+           ,@facturaDigital
+           ,@servGravados
+           ,@servExentos
+           ,@mercGravadas
+           ,@mercExentas
+           ,@totalExenta
+           ,@totalGravadas
+           ,@totalVenta
+           ,@totalDescuento
+           ,@totalVentaNeta
+           ,@totalImpuesto
+           ,@totalComprobante);
+
+END
+GO
+CREATE PROCEDURE PA_InsertarDetalleFactura
+(			@cia char(3)
+           ,@documento varchar(10)
+           ,@secuencia int
+           ,@articulo varchar(20)
+           ,@porcDescuento float
+           ,@porcImpuesto float
+           ,@unidadMedida varchar(10)
+           ,@cantidad float
+           ,@costo float
+           ,@precio money
+           ,@montoImpuesto money
+           ,@montoDescuento money
+           ,@total money
+           ,@descripcion varchar(50))
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   INSERT INTO [BDFACTURACION].[dbo].[detalleFactura]
+           ([cia]
+           ,[documento]
+           ,[secuencia]
+           ,[articulo]
+           ,[porcDescuento]
+           ,[porcImpuesto]
+           ,[unidadMedida]
+           ,[cantidad]
+           ,[costo]
+           ,[precio]
+           ,[montoImpuesto]
+           ,[montoDescuento]
+           ,[total]
+           ,[descripcion])
+     VALUES
+           (@cia
+           ,@documento
+           ,@secuencia
+           ,@articulo
+           ,@porcDescuento
+           ,@porcImpuesto
+           ,@unidadMedida
+           ,@cantidad
+           ,@costo
+           ,@precio
+           ,@montoImpuesto
+           ,@montoDescuento
+           ,@total
+           ,@descripcion);
 END
 GO

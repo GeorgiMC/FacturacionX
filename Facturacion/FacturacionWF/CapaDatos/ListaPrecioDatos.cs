@@ -23,7 +23,11 @@ namespace CapaDatos
             SqlCommand comando = new SqlCommand("PA_SeleccionarListaPrecio");
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@cia", cia);
-            comando.Parameters.AddWithValue("@filtro", filtro);
+            if(String.IsNullOrEmpty(filtro)){
+                comando.Parameters.AddWithValue("@filtro", System.DBNull.Value);
+            }else{
+                comando.Parameters.AddWithValue("@filtro", filtro);
+            }
             DataSet ds = db.ExecuteReader(comando, "ListaPrecio");
             return ds;
         }

@@ -150,3 +150,7 @@ E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionW
 E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.csproj.GenerateResource.Cache
 E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaArticulo.resources
 E:\Proyecto Final\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaCliente.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaArticulo.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.AgregaCliente.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.Inven.resources
+C:\Users\Alejandro - Soporte\Music\Respaldo\Facturacion\FacturacionWF\FacturacionWF\obj\Debug\FacturacionWF.ListaUsuarios.resources

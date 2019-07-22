@@ -46,5 +46,39 @@ namespace CapaDatos
             DataSet ds = db.ExecuteReader(comando, "factura");
             return ds;
         }
+
+        public void InsertarFactura(FacturaDatos factura)
+        {
+            Database db = DatabaseFactory.CreateDatabase("Default");
+
+            SqlCommand comando = new SqlCommand("PA_InsertarFactura");
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@cia", factura.cia);
+            comando.Parameters.AddWithValue("@tipo", factura.tipo);
+            comando.Parameters.AddWithValue("@documento", factura.documento);
+            comando.Parameters.AddWithValue("@caja", factura.caja);
+            comando.Parameters.AddWithValue("@fecha", factura.fecha);
+            comando.Parameters.AddWithValue("@codCliente", factura.codCliente);
+            comando.Parameters.AddWithValue("@pago", factura.pago);
+            comando.Parameters.AddWithValue("@agente", factura.agente);
+            comando.Parameters.AddWithValue("@moneda", factura.moneda);
+            comando.Parameters.AddWithValue("@cambio", factura.cambio);
+            comando.Parameters.AddWithValue("@descripcion", factura.descripcion);
+            comando.Parameters.AddWithValue("@referencia", factura.referencia);
+            comando.Parameters.AddWithValue("@estado", factura.estado);
+            comando.Parameters.AddWithValue("@facturaDigital", factura.facturaDigital);
+            comando.Parameters.AddWithValue("@servGravados", factura.servGravados);
+            comando.Parameters.AddWithValue("@servExentos", factura.servExentos);
+            comando.Parameters.AddWithValue("@mercGravadas", factura.mercGravadas);
+            comando.Parameters.AddWithValue("@mercExentas", factura.mercExentas);
+            comando.Parameters.AddWithValue("@totalExenta", factura.totalExentas);
+            comando.Parameters.AddWithValue("@totalGravadas", factura.totalGravadas);
+            comando.Parameters.AddWithValue("@totalVenta", factura.totalVenta);
+            comando.Parameters.AddWithValue("@totalDescuento", factura.totalDescuento);
+            comando.Parameters.AddWithValue("@totalVentaNeta", factura.totalVentaNeta);
+            comando.Parameters.AddWithValue("@totalImpuesto", factura.totalImpuesto);
+            comando.Parameters.AddWithValue("@totalComprobante", factura.totalComprobante);
+            DataSet ds = db.ExecuteReader(comando, "factura");
+        }
     }
 }

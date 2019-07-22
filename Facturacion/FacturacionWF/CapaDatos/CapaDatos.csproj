@@ -47,10 +47,14 @@
     <Compile Include="CantonDatos.cs" />
     <Compile Include="CompaniaDatos.cs" />
     <Compile Include="CompraDatos.cs" />
+    <Compile Include="ConsecutivosDatos.cs" />
+    <Compile Include="CreditoDatos.cs" />
     <Compile Include="DevolucionDatos.cs" />
     <Compile Include="DistritoDatos.cs" />
+    <Compile Include="ImpuestoDatos.cs" />
     <Compile Include="ListaPrecioDatos.cs" />
     <Compile Include="MonedaDatos.cs" />
+    <Compile Include="MovimientoCreditoDatos.cs" />
     <Compile Include="PaisDatos.cs" />
     <Compile Include="PedidoDatos.cs" />
     <Compile Include="ProveedorDatos.cs" />
@@ -62,6 +66,7 @@
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvinciaDatos.cs" />
+    <Compile Include="TipoArticuloDatos.cs" />
     <Compile Include="TipoDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />
     <Compile Include="VendedorDatos.cs" />
